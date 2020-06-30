@@ -1,12 +1,11 @@
 @import 'https://use.fontawesome.com/releases/v5.5.0/css/all.css';
+
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    /* background: url(login.jpg) no-repeat; */
-    /* background-image: url(/images/login.jpg) no-repeat; */
-    /* background-size: cover; */
 }
+
 .login-box {
     width: 280px;
     position: absolute;
@@ -15,6 +14,7 @@ body {
     transform: translate(-50%, -50%);
     color: black;
 }
+
 .login-box h1 {
     float: left;
     font-size: 40px;
@@ -22,6 +22,7 @@ body {
     margin-bottom: 50px;
     padding: 13px 0;
 }
+
 .textbox {
     width: 100%;
     overflow: hidden;
@@ -30,11 +31,13 @@ body {
     margin: 8px 0;
     border-bottom: 1px solid red;
 }
+
 .textbox i {
     width: 26px;
     float: left;
     text-align: center;
 }
+
 .textbox input {
     border: none;
     outline: none;
@@ -45,6 +48,7 @@ body {
     float: left;
     margin: 0 10px;
 }
+
 .btn {
     width: 100%;
     background: none;

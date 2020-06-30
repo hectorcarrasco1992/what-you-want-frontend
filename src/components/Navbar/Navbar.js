@@ -27,7 +27,7 @@ export default class Navbar extends Component {
                         <ul>
                             <NavLink to='/' id='nav-links'>
                                 <img
-                                    src='images/skull.png'
+                                    src='images/roamin.png'
                                     alt='skull'
                                     id='nav-skull'
                                 />
