@@ -217,10 +217,11 @@ export class Register extends Component {
                 password: password.value,
                 username: username.value,
             });
-
-            this.props.history.push('/')
-
+            
             successToast('👤Verified, please log in');
+
+            this.props.history.push('/login')
+
 
             inputForm['email'].value = '';
             inputForm['password'].value = '';

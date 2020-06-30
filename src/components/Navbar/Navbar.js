@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import AuthNavLinks from './AuthNavLinks';
+import UnAuthNavLinks from './UnAuthNavLinks';
+
+import { logout } from '../redux/actions/authUserAction';
 
 import './Navbar.css';
 
-export default class Navbar extends Component {
+export class Navbar extends Component {
     
     componentDidMount() {
         const nav = document.getElementById('nav')
@@ -20,6 +26,7 @@ export default class Navbar extends Component {
     }
 
     render() {
+        const { isAuthenticated, user } = this.props.authUser;
         return (
             <>
                 <div className='header'>
@@ -33,31 +40,19 @@ export default class Navbar extends Component {
                                 />
                             </NavLink>
 
-                            <li>
-                                <NavLink to='/about' id='nav-links'>
-                                    About
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/register' id='nav-links'>
-                                    Register
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/login' id='nav-links'>
-                                    Login
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/crap' id='nav-links'>
-                                    Crap
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/poop' id='nav-links'>
-                                    Poop
-                                </NavLink>
-                            </li>
+                            <nav>
+                                {user && isAuthenticated ? (
+                                    <AuthNavLinks
+                                        {...user}
+                                        {...isAuthenticated}
+                                        logout={this.props.logout}
+                                    />
+                                ) : (
+                                    <UnAuthNavLinks />
+                                )}
+                            </nav>
+
+                            
                         </ul>
                     </div>
                 </div>
@@ -65,3 +60,11 @@ export default class Navbar extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        authUser: state.authUser,
+    };
+};
+
+export default connect(mapStateToProps, { logout })(Navbar);
