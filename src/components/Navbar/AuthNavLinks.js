@@ -10,13 +10,13 @@ export default class AuthLinks extends Component {
                 <div className='header'>
                     <div className='navbar' id='nav'>
                         <ul>
-                            <NavLink to='/' id='nav-links'>
+                            {/* <NavLink to='/' id='nav-links'>
                                 <img
                                     src='images/roamin.png'
                                     alt='logo'
                                     id='nav-logo'
                                 />
-                            </NavLink>
+                            </NavLink> */}
 
                             <li>
                                 <NavLink to='/crap' id='nav-links'>

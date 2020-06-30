@@ -34,7 +34,7 @@ export class Navbar extends Component {
                         <ul>
                             <NavLink to='/' id='nav-links'>
                                 <img
-                                    src='images/roamin.png'
+                                    src='images/logo.png'
                                     alt='logo'
                                     id='nav-logo'
                                 />
@@ -51,8 +51,6 @@ export class Navbar extends Component {
                                     <UnAuthNavLinks />
                                 )}
                             </nav>
-
-                            
                         </ul>
                     </div>
                 </div>
