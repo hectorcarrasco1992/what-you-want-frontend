@@ -136,7 +136,7 @@ export class Login extends Component {
 
             successToast('🐒Welcome Back!');
 
-            this.props.history.push('/birthday');
+            this.props.history.push('/');
         } catch (e) {
             failureToast(e);
         }
@@ -185,19 +185,19 @@ export class Login extends Component {
                 </div>
 
 
-                <div class='login-box'>
+                <div className='login-box'>
                     <h1>Login</h1>
-                    <div class='textbox'>
-                        <i class='fas fa-user'></i>
+                    <div className='textbox'>
+                        <i className='fas fa-user'></i>
                         <input type='text' placeholder='Username' />
                     </div>
 
-                    <div class='textbox'>
-                        <i class='fas fa-lock'></i>
+                    <div className='textbox'>
+                        <i className='fas fa-lock'></i>
                         <input type='password' placeholder='Password' />
                     </div>
 
-                    <input type='button' class='btn' value='Sign in' />
+                    <input type='button' className='btn' value='Sign in' />
                 </div>
             </>
         );

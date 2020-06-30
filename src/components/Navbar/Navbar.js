@@ -28,8 +28,8 @@ export default class Navbar extends Component {
                             <NavLink to='/' id='nav-links'>
                                 <img
                                     src='images/roamin.png'
-                                    alt='skull'
-                                    id='nav-skull'
+                                    alt='logo'
+                                    id='nav-logo'
                                 />
                             </NavLink>
 

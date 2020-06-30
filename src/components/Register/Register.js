@@ -218,11 +218,14 @@ export class Register extends Component {
                 username: username.value,
             });
 
+            this.props.history.push('/')
+
             successToast('👤Verified, please log in');
 
             inputForm['email'].value = '';
             inputForm['password'].value = '';
             inputForm['username'].value = '';
+
             this.setState({
                 ...this.state,
                 formSetting: inputForm,

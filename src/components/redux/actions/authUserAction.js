@@ -7,7 +7,7 @@ import { LOGIN, LOGOUT } from '../constants/authUserConstant';
 
 export const signupAPI = (userInfo) => async (dispatch) => {
     try {
-        await Axios.post('/api/users/sign-up', userInfo);
+        await Axios.post('/api/users/register', userInfo);
 
         return Promise.resolve();
     } catch (e) {
