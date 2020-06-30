@@ -6,10 +6,8 @@
 
 .header {
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
     z-index: 0;
-    /* background-image: url(/images/rickandmorty.png); */
-    /* background-color: blue   */
 }
 
 .navbar {
@@ -49,7 +47,7 @@
     font-weight: 800;
 }
 
-#nav-skull{
+#nav-logo{
     height: 120px;
     width: 350px;
     float: left;

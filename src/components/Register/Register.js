@@ -205,7 +205,7 @@ export class Register extends Component {
     onSubmit = async (event) => {
         event.preventDefault();
 
-        const { email, password, username } = this.state.formConfig;
+        const { name,email, password, username, city, state, zipCode } = this.state.formConfig;
 
         try {
             let inputForm = {
@@ -213,16 +213,24 @@ export class Register extends Component {
             };
 
             await this.props.signupAPI({
+                name: name.value,
                 email: email.value,
                 password: password.value,
                 username: username.value,
+                city: city.value,
+                state: state.value,
+                zipCode: zipCode.value,
             });
 
             successToast('👤Verified, please log in');
 
+            this.props.history.push('/login')
+
+
             inputForm['email'].value = '';
             inputForm['password'].value = '';
             inputForm['username'].value = '';
+
             this.setState({
                 ...this.state,
                 formSetting: inputForm,
