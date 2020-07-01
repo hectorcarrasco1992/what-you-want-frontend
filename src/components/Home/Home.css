@@ -91,7 +91,8 @@ body {
     height: 400px;
     /* background: blue; */
     margin: 20px auto;
-    font-family: 'Calligraffitti', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
     font-size: 30px;
     text-align: end;
 }

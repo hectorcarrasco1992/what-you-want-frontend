@@ -9,7 +9,7 @@ export default class Home extends Component {
         return (
             <>
                 <div className='banner'>
-                    {/* <video autoPlay muted> */}
+                    {/* <video autoPlay mute d> */}
                     <video autoPlay muted loop>
                         <source src='/images/wdyw.mp4' type='video/mp4' />
                     </video>

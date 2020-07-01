@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import MainRouter from './MainRouter';
+import Loading from './components/Loading/Loading';
+import checkTokenAuth from './components/redux/lib/helpers/checkTokenAuth';
+
 
 import { Provider } from 'react-redux';
 import store from './components/redux/store/store';
 
-import Loading from './components/Loading/Loading';
 
 import './App.css';
 
+checkTokenAuth(store)
 export default class App extends Component {
-    componentDidMount() {
-        // console.log(document.cookie);
-    }
+   
 
     render() {
         return (

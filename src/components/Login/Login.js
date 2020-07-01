@@ -141,7 +141,7 @@ export class Login extends Component {
 
                    successToast('🐒Welcome Back!');
 
-                   this.props.history.push('/poop');
+                   this.props.history.push('/activities');
                } catch (e) {
                    failureToast(e);
                }
