@@ -15,6 +15,8 @@ export class Register extends Component {
         canSubmit: true,
         formSetting: {
             name: {
+                iconName: 'fas fa-user',
+                type: 'text',
                 name: 'name',
                 placeholder: 'Enter name',
                 value: '',
@@ -24,6 +26,8 @@ export class Register extends Component {
                 },
             },
             username: {
+                iconName: 'fas fa-user',
+                type: 'text',
                 name: 'username',
                 placeholder: 'Enter username',
                 value: '',
@@ -33,6 +37,8 @@ export class Register extends Component {
                 },
             },
             email: {
+                iconName: 'fas fa-at',
+                type: 'text',
                 name: 'email',
                 placeholder: 'Enter email',
                 value: '',
@@ -42,6 +48,8 @@ export class Register extends Component {
                 },
             },
             password: {
+                iconName: 'fas fa-lock',
+                type: 'password',
                 name: 'password',
                 placeholder: 'Enter password',
                 value: '',
@@ -51,6 +59,8 @@ export class Register extends Component {
                 },
             },
             city: {
+                iconName: 'fas fa-city',
+                type: 'text',
                 name: 'city',
                 placeholder: 'Enter city',
                 value: '',
@@ -60,6 +70,8 @@ export class Register extends Component {
                 },
             },
             state: {
+                iconName: 'fas fa-flag-usa',
+                type: 'text',
                 name: 'state',
                 placeholder: 'Enter state',
                 value: '',
@@ -69,6 +81,8 @@ export class Register extends Component {
                 },
             },
             zipCode: {
+                iconName: 'fas fa-code',
+                type: 'text',
                 name: 'zipCode',
                 placeholder: 'Enter zip code',
                 value: '',
@@ -205,7 +219,15 @@ export class Register extends Component {
     onSubmit = async (event) => {
         event.preventDefault();
 
-        const { name,email, password, username, city, state, zipCode } = this.state.formConfig;
+        const {
+            name,
+            email,
+            password,
+            username,
+            city,
+            state,
+            zipCode,
+        } = this.state.formConfig;
 
         try {
             let inputForm = {
@@ -224,9 +246,6 @@ export class Register extends Component {
 
             successToast('👤Verified, please log in');
 
-            this.props.history.push('/login')
-
-
             inputForm['email'].value = '';
             inputForm['password'].value = '';
             inputForm['username'].value = '';
@@ -236,9 +255,16 @@ export class Register extends Component {
                 formSetting: inputForm,
                 onSubmit: false,
             });
+
+            this.props.history.push('/login');
         } catch (e) {
             failureToast(e);
         }
+    };
+
+    onChangeUsername = (event) => {
+        console.log(event.target.name);
+        console.log(event.target.value);
     };
 
     render() {
@@ -251,9 +277,9 @@ export class Register extends Component {
         }
         return (
             <>
-                <div className='signup-container'>
-                    <h1>Sign up</h1>
-                    <form className='signup-form' onSubmit={this.onSubmit}>
+                <div className=''>
+                    <form className='login-box' onSubmit={this.onSubmit}>
+                        <h1>Register</h1>
                         {inputArray.map((element) => {
                             const {
                                 formSetting: {
@@ -261,12 +287,14 @@ export class Register extends Component {
                                     placeholder,
                                     value,
                                     error,
+                                    iconName,
                                 },
                             } = element;
                             return (
                                 <InputGroup
                                     key={name}
                                     name={name}
+                                    iconName={iconName}
                                     placeholder={placeholder}
                                     onChange={this.onChange}
                                     value={value}
@@ -276,53 +304,64 @@ export class Register extends Component {
                             );
                         })}
                         <ButtonGroup
-                            buttonStyle='form-button'
-                            title='Sign up'
+                            buttonStyle='btn'
+                            title='Register'
                             disabled={canSubmit}
                         />
                     </form>
                 </div>
 
-                <div className='login-box'>
-                    <h1>Register</h1>
-                    <div className='textbox'>
-                        <i className='fas fa-user'></i>
-                        <input
-                            type='text'
-                            placeholder='Username'
-                            name='username'
-                        />
+                {/* <form>
+                    <div className='login-box'>
+                        <h1>Register</h1>
+                        <div className='textbox'>
+                            <i className='fas fa-user'></i>
+                            <input
+                                type='text'
+                                placeholder='Username'
+                                name='username'
+                                onChange={this.onChangeUsername}
+                            />
+                        </div>
+                        <div className='textbox'>
+                            <i className='fas fa-at'></i>
+                            <input
+                                type='text'
+                                placeholder='Email'
+                                name='email'
+                            />
+                        </div>
+                        <div className='textbox'>
+                            <i className='fas fa-lock'></i>
+                            <input
+                                type='password'
+                                placeholder='Password'
+                                name='password'
+                            />
+                        </div>
+                        <div className='textbox'>
+                            <i className='fas fa-city'></i>
+                            <input type='text' placeholder='City' name='city' />
+                        </div>
+                        <div className='textbox'>
+                            <i className='fas fa-flag-usa'></i>
+                            <input
+                                type='text'
+                                placeholder='State'
+                                name='state'
+                            />
+                        </div>
+                        <div className='textbox'>
+                            <i className='fas fa-code'></i>
+                            <input
+                                type='text'
+                                placeholder='Zip Code'
+                                name='zipCode'
+                            />
+                        </div>
+                        <input type='button' className='btn' value='Sign in' />
                     </div>
-                    <div className='textbox'>
-                        <i className='fas fa-at'></i>
-                        <input type='text' placeholder='Email' name='email' />
-                    </div>
-                    <div className='textbox'>
-                        <i className='fas fa-lock'></i>
-                        <input
-                            type='password'
-                            placeholder='Password'
-                            name='password'
-                        />
-                    </div>
-                    <div className='textbox'>
-                        <i className='fas fa-city'></i>
-                        <input type='text' placeholder='City' name='city' />
-                    </div>
-                    <div className='textbox'>
-                        <i className='fas fa-flag-usa'></i>
-                        <input type='text' placeholder='State' name='state' />
-                    </div>
-                    <div className='textbox'>
-                        <i className='fas fa-user'></i>
-                        <input
-                            type='text'
-                            placeholder='Zip Code'
-                            name='zipCode'
-                        />
-                    </div>
-                    <input type='button' className='btn' value='Sign in' />
-                </div>
+                </form> */}
             </>
         );
     }

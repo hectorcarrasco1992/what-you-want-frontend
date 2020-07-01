@@ -22,9 +22,9 @@ export default class Home extends Component {
                         </p>
                     </div>
                 </div>
-                <h1 id='picture-title'>Is this a familiar sight?</h1>
+                <h1 id='picture-title'>Does this look familiar??</h1>
 
-                <div className='box1' style={{paddingBottom: '100px'}}>
+                <div className='box1' style={{ paddingBottom: '100px' }}>
                     <img
                         src='images/disagree.jpg'
                         alt='disagree'
@@ -34,14 +34,17 @@ export default class Home extends Component {
                         <h2>Does this poor bastard look like you?</h2>
                         <p style={{ fontSize: '20px' }}>
                             Everyday couple's bitch and moan trying to figure
-                            out where to eat. You get the same response.
-                            Classics like: <br />
-                            "No we ate there last time.", "I cant decide.", "Why
-                            do I always have to choose.", 'I{' '}
+                            out where to eat. <br/>You get the same response.
+                            Classics like: <br /><br/>
+                            "No we ate there last time.",
+                            <br /> "I cant decide.", <br />
+                            "Why do I always have to choose.", <br />
+                            'I{' '}
                             <span style={{ color: 'red', fontWeight: '800' }}>
                                 HATE
                             </span>{' '}
-                            that place.', or our favorite "I don't know 🤷‍♀️"
+                            that place.', <br />
+                            or our favorite "I don't know 🤷‍♀️"
                         </p>
                     </div>
                 </div>

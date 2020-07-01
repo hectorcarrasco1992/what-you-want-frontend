@@ -3,6 +3,8 @@ import ChipInputGroup from './ChipInputGroup';
 import InputGroup from './InputGroup';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+
+
 const MultiInputGroup = (props) => {
     let multiInputField = null;
     switch (props.type) {
@@ -18,6 +20,7 @@ const MultiInputGroup = (props) => {
                 />
             );
             break;
+        
         case 'email':
             multiInputField = (
                 <InputGroup
@@ -70,6 +73,8 @@ const MultiInputGroup = (props) => {
                 />
             );
             break;
+        
+        
         default:
             return null;
     }

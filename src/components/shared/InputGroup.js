@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-const InputGroup = ({ name, value, placeholder, type, onChange, error }) => {
+
+const InputGroup = ({ name, value, placeholder, type, onChange, iconName, error }) => {
+ 
     return (
-        <div className='form-group'>
+        <div className='textbox'>
+            <i className={iconName}></i>
             <input
                 type={type}
                 name={name}
@@ -28,7 +31,9 @@ InputGroup.propTypes = {
     onChange: PropTypes.func.isRequired,
     error: PropTypes.object,
 };
+
 InputGroup.defaultProps = {
     type: 'text',
 };
+
 export default InputGroup;
