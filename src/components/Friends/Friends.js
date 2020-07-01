@@ -4,7 +4,7 @@ export default class Poop extends Component {
     render() {
         return (
             <div>
-                <h1>Hey from Poop</h1>
+                <h1>Hey from Find FRIENDS</h1>
             </div>
         )
     }

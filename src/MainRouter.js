@@ -6,8 +6,8 @@ const Home = React.lazy(() => import('./components/Home/Home'));
 const About = React.lazy(() => import('./components/About/About'));
 const Login = React.lazy(() => import('./components/Login/Login'));
 const Register = React.lazy(() => import('./components/Register/Register'));
-const Poop = React.lazy(() => import('./components/Poop/Poop'));
-const Crap = React.lazy(() => import('./components/Crap/Crap'));
+const Friends = React.lazy(() => import('./components/Friends/Friends'));
+const Activities = React.lazy(() => import('./components/Activities/Activities'));
 
 export default class MainRouter extends Component {
     render() {
@@ -20,8 +20,8 @@ export default class MainRouter extends Component {
                     <Route path='/register' exact component={Register} />
                     <Route path='/login' exact component={Login} />
                     <Route path='/about' exact component={About} />
-                    <Route path='/poop' exact component={Poop} />
-                    <Route path='/crap' exact component={Crap} />
+                    <Route path='/friends' exact component={Friends} />
+                    <Route path='/activities' exact component={Activities} />
                    
                 </Switch>
             </>

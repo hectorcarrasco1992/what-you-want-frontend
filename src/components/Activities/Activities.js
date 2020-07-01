@@ -4,7 +4,7 @@ export default class Crap extends Component {
     render() {
         return (
             <>
-                <h1>Hey from Crap page</h1>
+                <h1>Hey from ACTIVITIES page</h1>
             </>
         );
     }

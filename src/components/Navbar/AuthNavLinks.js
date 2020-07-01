@@ -10,30 +10,29 @@ export default class AuthLinks extends Component {
                 <div className='header'>
                     <div className='navbar' id='nav'>
                         <ul>
-                            {/* <NavLink to='/' id='nav-links'>
+                            <NavLink to='/' id='nav-links'>
                                 <img
-                                    src='images/roamin.png'
+                                    src='images/logo.png'
                                     alt='logo'
                                     id='nav-logo'
                                 />
-                            </NavLink> */}
+                            </NavLink>
 
                             <li>
-                                <NavLink to='/crap' id='nav-links'>
-                                    Crap
+                                <NavLink to='/activities' id='nav-links'>
+                                    Activities
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to='/poop' id='nav-links'>
-                                    Poop
+                                <NavLink to='/friends' id='nav-links'>
+                                    Find Friends{' '}
+                                    <span role='img' aria-label='surf'>
+                                        🏄‍♂️
+                                    </span>
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink
-                                    to='/user-profile'
-                                    id='nav-links'
-                                    
-                                >
+                                <NavLink to='/user-profile' id='nav-links'>
                                     {this.props.username}
                                 </NavLink>
                             </li>
