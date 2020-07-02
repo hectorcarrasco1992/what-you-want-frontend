@@ -5,6 +5,7 @@ const initialState = {
     user: null,
 };
 
+
 export default function (state = initialState, action) {
     switch (action.type) {
         case SIGN_UP:
@@ -27,7 +28,8 @@ export default function (state = initialState, action) {
                 isAuthenticated: false,
                 user: null,
             };
-
+        
+      
         default:
             return state;
     }

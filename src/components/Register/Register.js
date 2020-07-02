@@ -262,11 +262,6 @@ export class Register extends Component {
         }
     };
 
-    onChangeUsername = (event) => {
-        console.log(event.target.name);
-        console.log(event.target.value);
-    };
-
     render() {
         const { canSubmit, formSetting } = this.state;
         let inputArray = [];
@@ -318,4 +313,3 @@ export class Register extends Component {
 const mapStateToProps = (state) => ({});
 
 export default connect(mapStateToProps, { signupAPI })(Register);
-// export default connect(mapStateToProps, { signupAPI })(Signup);
