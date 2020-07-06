@@ -5,13 +5,19 @@ import Axios from '../lib/Axios/Axios';
 import { ACTIVITIES } from '../constants/activityConstant';
 
 
-export const activitiesAPI = () => async (dispatch) => {
+export const activitiesAPI = (user) => async (dispatch) => {
     try {
-        let success = await Axios.get('/api/activity/get-activities');
-
+        let userObj = {username:user.username}
+        console.log(userObj);
+        
+        let success = await Axios.post('/api/activity/get-activities', userObj);
+        console.log("user....",user);
+        
+        //console.log(user);
+        
         dispatch({
             type: ACTIVITIES,
-            payload: success.data,
+            payload: success.data
         });
 
     } catch (error) {
