@@ -25,7 +25,7 @@ export default class AuthLinks extends Component {
                             </li>
                             <li>
                                 <NavLink to='/friends' id='nav-links'>
-                                    Find Friends{' '}
+                                    Find Friends
                                     <span role='img' aria-label='surf'>
                                         🏄‍♂️
                                     </span>
