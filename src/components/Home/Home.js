@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import Cards from '../Cards/Cards';
-
 import './Home.css';
 
 export default class Home extends Component {
@@ -18,7 +16,10 @@ export default class Home extends Component {
                         <p>
                             This app is for all you people that can never decide
                             on what to eat, where to go, or what to do. Thinking
-                            is hard, so we do all that shit for you. 🐿
+                            is hard, so we do all that shit for you.
+                            <span role='img' aria-label='rockin'>
+                                🏄‍🤘
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -31,11 +32,12 @@ export default class Home extends Component {
                         id='disagree'
                     />
                     <div>
-                        <h2>Does this poor bastard look like you?</h2>
+                        <h2>You know these feels bro?</h2>
                         <p style={{ fontSize: '20px' }}>
                             Everyday couple's bitch and moan trying to figure
-                            out where to eat. <br/>You get the same response.
-                            Classics like: <br /><br/>
+                            out where to eat. <br />
+                            You get the same response. Classics like: <br />
+                            <br />
                             "No we ate there last time.",
                             <br /> "I cant decide.", <br />
                             "Why do I always have to choose.", <br />
@@ -54,19 +56,17 @@ export default class Home extends Component {
                     <div>
                         <h2>Salvage your relationship</h2>
                         <p style={{ fontSize: '20px' }}>
-                            This chick is sick of her mans poor choices about
+                            This chick is sick of her mans crappy choices about
                             what to do on their first day off together in weeks.
                             Shes counting down the seconds till she can go hit
                             up her side-piece. Leaving you all alone watching
                             re-runs of "Friends", eating three pint's of Ben and
                             Jerry's Ice cream. Then going to bed alone, like a
-                            loser.
+                            loser. Lets break the cycle gentlemen.
                         </p>
                     </div>
                 </div>
-                <div className='activities-box'>
-                    <Cards />
-                </div>
+                
                 <div className='box3'></div>
             </>
         );
