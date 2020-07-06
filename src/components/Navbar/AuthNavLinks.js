@@ -18,6 +18,7 @@ export default class AuthLinks extends Component {
                                 />
                             </NavLink>
 
+                            
                             <li>
                                 <NavLink to='/activities' id='nav-links'>
                                     Activities
@@ -36,6 +37,7 @@ export default class AuthLinks extends Component {
                                     {this.props.username}
                                 </NavLink>
                             </li>
+
                             <li>
                                 <NavLink
                                     to='/login'

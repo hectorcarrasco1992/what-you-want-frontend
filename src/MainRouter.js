@@ -8,6 +8,7 @@ const Login = React.lazy(() => import('./components/Login/Login'));
 const Register = React.lazy(() => import('./components/Register/Register'));
 const Friends = React.lazy(() => import('./components/Friends/Friends'));
 const Activities = React.lazy(() => import('./components/Activities/Activities'));
+const Restaurant = React.lazy(() => import('./components/Restaurant/Restaurant'));
 
 export default class MainRouter extends Component {
     render() {
@@ -21,7 +22,10 @@ export default class MainRouter extends Component {
                     <Route path='/login' exact component={Login} />
                     <Route path='/about' exact component={About} />
                     <Route path='/friends' exact component={Friends} />
+                    
                     <Route path='/activities' exact component={Activities} />
+                    
+                    <Route path='/restaurant' exact component={Restaurant} />
                    
                 </Switch>
             </>

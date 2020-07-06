@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Poop extends Component {
+export default class Friends extends Component {
     render() {
         return (
             <div>
