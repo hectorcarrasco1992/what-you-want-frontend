@@ -11,7 +11,7 @@ export class Activities extends Component {
             this.props.authUser.isAuthenticated &&
             this.props.authUser.user !== null
         ) {
-            await this.props.activitiesAPI();
+            await this.props.activitiesAPI(this.props.authUser.user);
         }
     }
 
