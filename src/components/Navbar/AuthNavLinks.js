@@ -17,8 +17,6 @@ export default class AuthLinks extends Component {
                                     id='nav-logo'
                                 />
                             </NavLink>
-
-                            
                             <li>
                                 <NavLink to='/activities' id='nav-links'>
                                     Activities
@@ -27,9 +25,6 @@ export default class AuthLinks extends Component {
                             <li>
                                 <NavLink to='/friends' id='nav-links'>
                                     Find Friends
-                                    <span role='img' aria-label='surf'>
-                                        🏄‍♂️
-                                    </span>
                                 </NavLink>
                             </li>
                             <li>

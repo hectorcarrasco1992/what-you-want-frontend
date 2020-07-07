@@ -18,7 +18,7 @@ export default class Home extends Component {
                             on what to eat, where to go, or what to do. Thinking
                             is hard, so we do all that shit for you.
                             <span role='img' aria-label='rockin'>
-                                🏄‍🤘
+                                🤘
                             </span>
                         </p>
                     </div>

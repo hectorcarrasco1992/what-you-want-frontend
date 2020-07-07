@@ -9,7 +9,7 @@ export default class Friends extends Component {
         canSubmit: true,
         formSetting: {
             name: {
-                iconName: 'fas fa-user',
+                iconName: 'fas fa-search',
                 type: 'text',
                 name: 'name',
                 placeholder: 'Find Friend',

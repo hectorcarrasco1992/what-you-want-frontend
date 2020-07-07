@@ -66,18 +66,18 @@ export default class Cards extends Component {
                     </div>
                     <div className='card 7'>
                         <div className='card_image'>
-                            <img src='/images/movies.jpg' alt='movies' />
+                            <img src='/images/soon.jpg' alt='movies' />
                         </div>
                         <div className='card_title title-white'>
-                            <p>Movies</p>
+                            {/* <p>Coming Soon</p> */}
                         </div>
                     </div>
                     <div className='card 8'>
                         <div className='card_image'>
-                            <img src='/images/movies.jpg' alt='movies' />
+                            <img src='/images/soon2.jpg' alt='movies' />
                         </div>
                         <div className='card_title title-white'>
-                            <p>Skydiving</p>
+                            {/* <p>Coming Soon</p> */}
                         </div>
                     </div>
                 </div>
