@@ -84,11 +84,11 @@ export default class Home extends Component {
                     <img src='images/happy.jpg' alt='happy' id='imgRight' />
                     <div>
                         <h2 style={{ paddingTop: '130px' }}>
-                            As the old saying goes "Happy wife, happy life."
+                            "Happy wife, happy life."
                         </h2>
                         <br />
                         <p style={{ fontSize: '20px' }}>
-                            Something witty and shit
+                            Something witty and shit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem atque et optio nemo aliquid fugit illum laudantium molestias voluptatem voluptate.
                         </p>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ export default class Home extends Component {
                     <img src='images/happy2.jpg' alt='happy2' id='imgLeft' />
                     <div>
                         <h2 style={{ paddingTop: '130px' }}>
-                            Smiles all around
+                            Smiles all around.
                         </h2>
                         <br />
                         <p style={{ fontSize: '20px' }}>

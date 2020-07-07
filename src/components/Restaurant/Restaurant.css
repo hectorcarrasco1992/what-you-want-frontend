@@ -65,13 +65,13 @@ h1 {
 }
 
 .btn:hover {
-    border: 2px solid limegreen;
+    border: 1px solid limegreen;
     cursor: pointer;
 }
 
-.btn #dislike:hover {
+/* .btn #dislike:hover {
     color: red
-}
+} */
 
 /* span:before {
     content: '';

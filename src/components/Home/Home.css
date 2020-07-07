@@ -55,12 +55,6 @@ video{
     font-family: 'Oswald', sans-serif;
 }
 
-/* .activities-box {
-    width: 80%;
-    height: 500px;
-    margin: 20px auto;
-} */
-
 #picture-title {
     font-family: 'Oswald', sans-serif;
     font-size: 100px;
@@ -78,6 +72,10 @@ video{
     height: 400px;
     width: 50%;
     float: left;
+}
+
+h2 {
+    font-size: 
 }
 
 .box1 {
@@ -106,6 +104,7 @@ video{
     height: 400px;
     /* background: orange; */
     margin: 20px auto;
+    font-size: 30px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -114,6 +113,7 @@ video{
     height: 400px;
     /* background: red; */
     margin: 20px auto;
+    font-size: 30px;
     font-family: 'Oswald', sans-serif;
     text-align: end;
 }
