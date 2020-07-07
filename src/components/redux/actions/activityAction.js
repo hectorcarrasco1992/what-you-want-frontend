@@ -10,7 +10,7 @@ export const activitiesAPI = (user) => async (dispatch) => {
         let userObj = {username:user.username}
         console.log(userObj);
         
-        let success = await Axios.post('/api/activity/get-activities', userObj);
+        let success = await Axios.get('/api/activity/activity', userObj);
         console.log("user....",user);
         
         //console.log(user);

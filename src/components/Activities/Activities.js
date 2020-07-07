@@ -5,7 +5,7 @@ import Cards from '../Cards/Cards';
 import './Activities.css';
 
 
-export default class Choices extends Component {
+export default class Activities extends Component {
     render() {
         return (
             <>

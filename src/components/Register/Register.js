@@ -120,6 +120,10 @@ export class Register extends Component {
         },
     };
 
+    componentDidMount() {
+        
+    }
+
     checkInputValidation = (errorState, inputName, inputValue) => {
         switch (inputName) {
             case 'username':
@@ -261,6 +265,8 @@ export class Register extends Component {
             failureToast(e);
         }
     };
+
+
 
     render() {
         const { canSubmit, formSetting } = this.state;

@@ -23,16 +23,18 @@ export default class Home extends Component {
                         </p>
                     </div>
                 </div>
+
                 <h1 id='picture-title'>Does this look familiar??</h1>
 
                 <div className='box1' style={{ paddingBottom: '100px' }}>
                     <img
                         src='images/disagree.jpg'
                         alt='disagree'
-                        id='disagree'
+                        id='imgRight'
                     />
                     <div>
                         <h2>You know these feels bro?</h2>
+                        <br />
                         <p style={{ fontSize: '20px' }}>
                             Everyday couple's bitch and moan trying to figure
                             out where to eat. <br />
@@ -46,15 +48,16 @@ export default class Home extends Component {
                                 HATE
                             </span>{' '}
                             that place.', <br />
-                            or our favorite "I don't know 🤷‍♀️"
+                            or our favorite "I don't know, you pick. 🤷‍♀️"
                         </p>
                     </div>
                 </div>
 
                 <div className='box2'>
-                    <img src='images/wtf.jpg' alt='wtf' id='wtf' />
+                    <img src='images/wtf.jpg' alt='wtf' id='imgLeft' />
                     <div>
-                        <h2>Salvage your relationship</h2>
+                        <h2 style={{paddingTop: '70px'}}>Salvage your relationship</h2>
+                        <br />
                         <p style={{ fontSize: '20px' }}>
                             This chick is sick of her mans crappy choices about
                             what to do on their first day off together in weeks.
@@ -66,8 +69,41 @@ export default class Home extends Component {
                         </p>
                     </div>
                 </div>
-                
-                <div className='box3'></div>
+
+                <h1 id='picture-title'>
+                    Turn that{' '}
+                    <span style={{ color: 'red' }}>nightmare</span> into
+                    this!!
+                </h1>
+
+                <div className='box3' style={{ paddingBottom: '100px' }}>
+                    <img src='images/happy.jpg' alt='happy' id='imgRight' />
+                    <div>
+                        <h2 style={{ paddingTop: '130px' }}>
+                            As the old saying goes "Happy wife, happy life."
+                        </h2>
+                        <br />
+                        <p style={{ fontSize: '20px' }}>
+                            Something witty and shit
+                        </p>
+                    </div>
+                </div>
+
+                <div className='box4'>
+                    <img src='images/happy2.jpg' alt='happy2' id='imgLeft' />
+                    <div>
+                        <h2
+                            style={{ textAlign: 'center', paddingTop: '130px' }}
+                        >
+                            Smiles all around
+                        </h2>
+                        <br />
+                        <p style={{ fontSize: '20px', textAlign: 'center' }}>
+                            It's time to enjoy each others company instead of
+                            letting small things get in the way.
+                        </p>
+                    </div>
+                </div>
             </>
         );
     }
