@@ -2,7 +2,7 @@
 // import jwt_decode from 'jwt-decode';
 import Axios from '../lib/Axios/Axios';
 
-import { ACTIVITIES } from '../constants/activityConstant';
+import { ACTIVITIES,LIKE } from '../constants/activityConstant';
 
 
 export const activitiesAPI = (user) => async (dispatch) => {
@@ -30,3 +30,18 @@ export const activitiesAPI = (user) => async (dispatch) => {
         }
     }
 };
+
+export const likeActivity = (name)=>async(dispatch)=>{
+    try {
+        let success = await Axios.post("/api/activity/like-activity",name)
+        console.log("####",success);
+        //console.log("$$$$$$",id)
+        
+        dispatch({
+            type:LIKE,
+            payload:success.data
+        })
+    } catch (error) {
+        return Promise.reject(error.message)
+    }
+}
