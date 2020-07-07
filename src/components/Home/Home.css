@@ -5,7 +5,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* font-family: 'Parisienne', cursive; */
     height: 1000px;
 }
 
@@ -56,18 +55,29 @@ video{
     font-family: 'Oswald', sans-serif;
 }
 
-.activities-box {
+/* .activities-box {
     width: 80%;
     height: 500px;
-    /* background: black; */
     margin: 20px auto;
-}
+} */
 
 #picture-title {
     font-family: 'Oswald', sans-serif;
     font-size: 100px;
     text-align: center;
     padding-bottom: 50px;
+}
+
+#imgRight {
+    height: 400px;
+    width: 50%;
+    float: right;
+}
+
+#imgLeft {
+    height: 400px;
+    width: 50%;
+    float: left;
 }
 
 .box1 {
@@ -81,16 +91,9 @@ video{
     padding-bottom: 100px;
 }
 
-#disagree {
-    height: 400px;
-    width: 50%;
-    float: right;
-}
-
 .box2 {
     width: 80%;
     height: 400px;
-    /* background: blue; */
     margin: 20px auto;
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
@@ -98,16 +101,20 @@ video{
     text-align: end;
 }
 
-#wtf {
-    height: 400px;
-    width: 50%;
-    float: left;
-}
-
 .box3 {
     width: 80%;
     height: 400px;
     background: orange;
     margin: 20px auto;
-    font-family: 'Bad Script', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+
+.box4 {
+    width: 80%;
+    height: 400px;
+    background: crimson;
+    margin: 20px auto;
+    font-family: 'Oswald', sans-serif;
+    text-align: end;
+
 }
