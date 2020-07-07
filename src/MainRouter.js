@@ -10,6 +10,7 @@ const Friends = React.lazy(() => import('./components/Friends/Friends'));
 const Activities = React.lazy(() => import('./components/Activities/Activities'));
 const Restaurant = React.lazy(() => import('./components/Restaurant/Restaurant'));
 
+
 export default class MainRouter extends Component {
     render() {
         return (
@@ -28,6 +29,7 @@ export default class MainRouter extends Component {
                     <Route path='/restaurant' exact component={Restaurant} />
                    
                 </Switch>
+                
             </>
         );
     }
