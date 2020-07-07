@@ -40,7 +40,9 @@ export class Restaurant extends Component {
 
                                 <ButtonGroup
                                     buttonStyle='btn'
+                                    style={{border: '1px solid red'}}
                                     title='Dislike'
+                                    id='dislike'
                                     // disabled={canSubmit}
                                 />
                                 <ButtonGroup
@@ -49,9 +51,6 @@ export class Restaurant extends Component {
                                     // disabled={canSubmit}
                                 />
 
-                                <div>
-                                    <i className='fas fa-hand-middle-finger'></i>
-                                </div>
                             </div>
                         );
                     })}
