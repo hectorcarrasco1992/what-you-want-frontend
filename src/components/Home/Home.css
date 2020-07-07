@@ -104,7 +104,7 @@ video{
 .box3 {
     width: 80%;
     height: 400px;
-    background: orange;
+    /* background: orange; */
     margin: 20px auto;
     font-family: 'Oswald', sans-serif;
 }
@@ -112,9 +112,7 @@ video{
 .box4 {
     width: 80%;
     height: 400px;
-    background: crimson;
     margin: 20px auto;
     font-family: 'Oswald', sans-serif;
     text-align: end;
-
 }
