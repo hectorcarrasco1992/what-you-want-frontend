@@ -56,7 +56,9 @@ export class Restaurant extends Component {
                             {console.log(item)}
                                 <ButtonGroup
                                     buttonStyle='btn'
+                                    style={{border: '1px solid red'}}
                                     title='Dislike'
+                                    id='dislike'
                                     // disabled={canSubmit}
                                 />
                                 <ButtonGroup
@@ -66,9 +68,6 @@ export class Restaurant extends Component {
                                     onClick={()=>this.handleLike(item.name)}
                                 />
 
-                                <div>
-                                    <i className='fas fa-hand-middle-finger'></i>
-                                </div>
                             </div>
                         );
                     })}

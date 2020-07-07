@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Footer from '../Footer/Footer'
+
 import './Home.css';
 
 export default class Home extends Component {
@@ -56,7 +58,9 @@ export default class Home extends Component {
                 <div className='box2'>
                     <img src='images/wtf.jpg' alt='wtf' id='imgLeft' />
                     <div>
-                        <h2 style={{paddingTop: '70px'}}>Salvage your relationship</h2>
+                        <h2 style={{ paddingTop: '70px' }}>
+                            Salvage your relationship
+                        </h2>
                         <br />
                         <p style={{ fontSize: '20px' }}>
                             This chick is sick of her mans crappy choices about
@@ -71,39 +75,38 @@ export default class Home extends Component {
                 </div>
 
                 <h1 id='picture-title'>
-                    Turn that{' '}
-                    <span style={{ color: 'red' }}>nightmare</span> into
-                    this!!
+                    Turn that <span style={{ color: 'red' }}>nightmare</span>{' '}
+                    into this{' '}
+                    <span style={{ color: 'rgb(89, 139, 247)' }}>dream</span>!!
                 </h1>
 
                 <div className='box3' style={{ paddingBottom: '100px' }}>
                     <img src='images/happy.jpg' alt='happy' id='imgRight' />
                     <div>
                         <h2 style={{ paddingTop: '130px' }}>
-                            As the old saying goes "Happy wife, happy life."
+                            "Happy wife, happy life."
                         </h2>
                         <br />
                         <p style={{ fontSize: '20px' }}>
-                            Something witty and shit
+                            Something witty and shit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem atque et optio nemo aliquid fugit illum laudantium molestias voluptatem voluptate.
                         </p>
                     </div>
                 </div>
 
-                <div className='box4'>
+                <div className='box4' style={{ paddingBottom: '150px' }}>
                     <img src='images/happy2.jpg' alt='happy2' id='imgLeft' />
                     <div>
-                        <h2
-                            style={{ textAlign: 'center', paddingTop: '130px' }}
-                        >
-                            Smiles all around
+                        <h2 style={{ paddingTop: '130px' }}>
+                            Smiles all around.
                         </h2>
                         <br />
-                        <p style={{ fontSize: '20px', textAlign: 'center' }}>
+                        <p style={{ fontSize: '20px' }}>
                             It's time to enjoy each others company instead of
                             letting small things get in the way.
                         </p>
                     </div>
                 </div>
+                <Footer />
             </>
         );
     }
