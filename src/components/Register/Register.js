@@ -120,9 +120,6 @@ export class Register extends Component {
         },
     };
 
-    componentDidMount() {
-        
-    }
 
     checkInputValidation = (errorState, inputName, inputValue) => {
         switch (inputName) {

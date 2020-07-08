@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import validator from 'validator';
 
-import Matches from '../Matches/Matches'
+import { findFriendAPI } from '../redux/actions/friendAction';
+
+import Matches from '../Matches/Matches';
 
 import InputGroup from '../shared/InputGroup';
 import ButtonGroup from '../shared/ButtonGroup';
 
 import './Friends.css';
-export default class Friends extends Component {
+export class Friends extends Component {
     state = {
-        canSubmit: true,
+        canSubmit: false,
         formSetting: {
             name: {
                 iconName: 'fas fa-search',
                 type: 'text',
-                name: 'name',
+                name: 'username',
                 placeholder: 'Enter Username',
                 value: '',
                 error: {
@@ -22,6 +26,7 @@ export default class Friends extends Component {
                 },
             },
         },
+        inputValue: '',
         validate: {
             usernameError: {
                 noError: null,
@@ -30,29 +35,93 @@ export default class Friends extends Component {
         },
     };
 
+    checkInputValidation = (errorState, inputName, inputValue) => {
+        switch (inputName) {
+            case 'username':
+                let validatedUsername;
+                validatedUsername = validator.matches(
+                    inputValue,
+                    /^[a-zA-Z0-9]{1,20}$/
+                );
+                if (!validatedUsername) {
+                    errorState.usernameError.noError = validatedUsername;
+                    errorState.usernameError.message =
+                        'cannot contain special characters and minimum of 2 and maximum of 20 characters';
+                    return errorState;
+                } else {
+                    errorState.usernameError.noError = validatedUsername;
+                    errorState.usernameError.message = '';
+                    return errorState;
+                }
+            case 'email':
+                let validatedEmail;
+                validatedEmail = validator.isEmail(inputValue);
+                if (!validatedEmail) {
+                    errorState.emailError.noError = validatedEmail;
+                    errorState.emailError.message = 'It must be an email';
+                    return errorState;
+                } else {
+                    errorState.emailError.noError = validatedEmail;
+                    errorState.emailError.message = '';
+                    return errorState;
+                }
+            case 'password':
+                // let validatedPassword;
+                // validatedPassword = validator.matches(
+                //   inputValue,
+                //   "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+                // );
+                let validatedPassword = true;
+                if (!validatedPassword) {
+                    errorState.passwordError.noError = validatedPassword;
+                    errorState.passwordError.message =
+                        'Minimum eight characters, at least one letter, one number and one special character';
+                    return errorState;
+                } else {
+                    errorState.passwordError.noError = validatedPassword;
+                    errorState.passwordError.message = '';
+                    return errorState;
+                }
+            default:
+                return errorState;
+        }
+    };
+
     onChange = (event) => {
         let inputForm = {
             ...this.state.formSetting,
         };
 
-        inputForm[event.target.name].value = event.target.value;
+        this.setState({
+            ...this.state,
+            inputValue: event.target.value,
+        });
+
+        // console.log('event.target', event.target);
+
+        // console.log('$$$$$$', [event.target.name]);
+
+        // console.log('state....', this.state);
+
         let isValidatedCheck = this.checkInputValidation(
             this.state.validate,
             event.target.name,
             event.target.value
         );
-        inputForm['username'].error = isValidatedCheck.usernameError;
+
+        inputForm['name'].error = isValidatedCheck.usernameError;
 
         this.setState({
             validate: isValidatedCheck,
         });
-        if (inputForm['username'].error.noError === false) {
+
+        if (inputForm['name'].error.noError === false) {
             this.setState({
                 canSubmit: true,
             });
             return;
         }
-        if (inputForm['username'].error.noError) {
+        if (inputForm['name'].error.noError) {
             this.setState({
                 canSubmit: false,
             });
@@ -63,6 +132,22 @@ export default class Friends extends Component {
                 formConfig: inputForm,
             });
             return;
+        }
+    };
+
+    onSubmit = async (event) => {
+        event.preventDefault();
+
+        console.log('inputValue', this.state.inputValue);
+
+        try {
+            await this.props.findFriendAPI({
+                username: this.state.inputValue,
+            });
+
+            console.log('this.props :>> ', this.props.friends);
+        } catch (error) {
+            console.log('Error', error);
         }
     };
 
@@ -79,41 +164,54 @@ export default class Friends extends Component {
                 <div className='search-container'>
                     <form className='friends-box' onSubmit={this.onSubmit}>
                         <h1>Find Friends</h1>
-                        {inputArray.map((element) => {
-                            const {
-                                formSetting: {
-                                    name,
-                                    placeholder,
-                                    value,
-                                    error,
-                                    iconName,
-                                },
-                            } = element;
-                            return (
-                                <InputGroup
-                                    key={name}
-                                    name={name}
-                                    iconName={iconName}
-                                    placeholder={placeholder}
-                                    onChange={this.onChange}
-                                    value={value}
-                                    error={error}
-                                    type={name}
-                                />
-                            );
-                        })}
+                        <InputGroup
+                            key={this.state.formSetting.name.name}
+                            name={this.state.formSetting.name.name}
+                            iconName={this.state.formSetting.name.iconName}
+                            placeholder={
+                                this.state.formSetting.name.placeholder
+                            }
+                            onChange={this.onChange}
+                            value={this.state.inputValue}
+                            error={this.state.formSetting.name.error}
+                            type={this.state.formSetting.name.name}
+                        />
                         <ButtonGroup
                             buttonStyle='btn'
                             title='Search'
                             disabled={canSubmit}
                         />
-                
+                        {/* {inputArray.map((element) => {
+                                                            const {
+                                                                formSetting: {
+                                                                    name,
+                                                                    placeholder,
+                                                                    value,
+                                                                    error,
+                                                                    iconName,
+                                                                },
+                                                            } = element;
+                            
+                            
+                        })} */}
                     </form>
                 </div>
+
+                <Matches
+                    name={this.props.friends.friends.name}
+                    city={this.props.friends.friends.city}
+                    state={this.props.friends.friends.state}
+                    zipCode={this.props.friends.friends.zipCode}
                 
-                <Matches />
-                
+                />
             </>
         );
     }
 }
+
+const mapStateToProps = (state) => ({
+    friends: state.friends,
+    authUser: state.authUser,
+});
+
+export default connect(mapStateToProps, { findFriendAPI })(Friends);

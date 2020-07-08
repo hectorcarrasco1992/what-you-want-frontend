@@ -27,7 +27,7 @@ export class Restaurant extends Component {
                     {this.props.activities.activities.map((item) => {
                         const { name, cost, cuisines, thumb, location } = item;
                         return (
-                            <div className='activity-card' key={item._id}>
+                            <div className='activity-card' key={item.id}>
                                 <img
                                     className='restaurant-image'
                                     src={thumb}
