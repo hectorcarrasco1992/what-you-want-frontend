@@ -32,14 +32,15 @@
 #nav-links {
     font-family: 'Oswald', sans-serif;
     text-decoration: none;
-    color: orange;
+    color: #5A8BF6;
+    /* color: rgb(147, 147, 231); */
     font: red;
     cursor: pointer;
 }
 
 #nav-links:hover {
     color: red;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 #nav-logo {

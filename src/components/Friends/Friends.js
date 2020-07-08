@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Matches from '../Matches/Matches'
+
 import InputGroup from '../shared/InputGroup';
 import ButtonGroup from '../shared/ButtonGroup';
 
@@ -12,7 +14,7 @@ export default class Friends extends Component {
                 iconName: 'fas fa-search',
                 type: 'text',
                 name: 'name',
-                placeholder: 'Find Friend',
+                placeholder: 'Enter Username',
                 value: '',
                 error: {
                     message: '',
@@ -74,8 +76,8 @@ export default class Friends extends Component {
         }
         return (
             <>
-                <div className=''>
-                    <form className='login-box' onSubmit={this.onSubmit}>
+                <div className='search-container'>
+                    <form className='friends-box' onSubmit={this.onSubmit}>
                         <h1>Find Friends</h1>
                         {inputArray.map((element) => {
                             const {
@@ -105,8 +107,12 @@ export default class Friends extends Component {
                             title='Search'
                             disabled={canSubmit}
                         />
+                
                     </form>
                 </div>
+                
+                <Matches />
+                
             </>
         );
     }

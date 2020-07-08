@@ -1,0 +1,68 @@
+#left {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    width: 200px;
+    height: 400px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.lefthover {
+    opacity: 0;
+    background: linear-gradient(90deg,slateblue 0,darkturquoise 100%);;
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 400px;
+    transition: all 0.5s ease-in-out;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+#left:hover .lefthover {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+#left img {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+}
+
+#left:hover img {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(10deg) scale(10.1);
+    -webkit-filter: blur(3px) grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: blur(10px) grayscale(100%);
+}
+
+.miniposts {
+    font-family: sans-serif;
+    /* margin: auto; */
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: black;
+    width: 750px;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    background: none;
+    border: 2px solid red;
+    color: black;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+}
