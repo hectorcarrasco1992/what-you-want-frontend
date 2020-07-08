@@ -22,11 +22,13 @@ export class Restaurant extends Component {
         }
     }
 
-    handleLike=async (name)=>{
+    handleLike=async (id)=>{
         try {
-            let success = await likeActivity(name)
+            console.log(id);
+            
+            //console.log(id);
+            let success = await likeActivity(id)
             console.log(success);
-            console.log(name);
             
             return success
             
@@ -41,9 +43,12 @@ export class Restaurant extends Component {
             <div className='activity-container' style={{paddingBottom: '60px'}}>
                 <>
                     {this.props.activities.activities.map((item) => {
-                        const { name, cost, cuisines, thumb, location, } = item;
+                        const {canSubmit}= this.state
+                        const { name, cost, cuisines, thumb, location,apiID } = item;
+                        {console.log(item.apiID);
+                        }
                         return (
-                            <div className='activity-card' key={item._id}>
+                            <div className='activity-card' key={apiID}>
                                 <img
                                     className='restaurant-image'
                                     src={thumb}
@@ -53,19 +58,19 @@ export class Restaurant extends Component {
                                 <p>Cost: {cost}</p>
                                 <p>Cuisines: {cuisines}</p>
                                 <p>{location.address}</p>
-                            {console.log(item)}
+                            
                                 <ButtonGroup
                                     buttonStyle='btn'
                                     style={{border: '1px solid red'}}
                                     title='Dislike'
                                     id='dislike'
-                                    // disabled={canSubmit}
+                                    disabled={canSubmit}
                                 />
                                 <ButtonGroup
                                     buttonStyle='btn'
                                     title='Like'
-                                    disabled={this.state.canSubmit}
-                                    onClick={()=>this.handleLike(item.name)}
+                                    disabled={canSubmit}
+                                    onClick={()=>this.handleLike(apiID)}
                                 />
 
                             </div>
