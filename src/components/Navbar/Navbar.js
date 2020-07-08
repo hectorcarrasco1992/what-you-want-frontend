@@ -19,7 +19,8 @@ export class Navbar extends Component {
                 nav.style.background = 'rgb(38, 38, 39) ';
                 // nav.style.boxShadow = '10px 4px 1px black'
             } else {
-                nav.style.background = 'transparent'
+                // nav.style.background = 'transparent'
+                nav.style.background = 'rgb(38, 38, 39) ';
                 // nav.style.boxShadow = 'none';
             }
         }

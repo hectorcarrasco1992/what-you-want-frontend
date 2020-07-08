@@ -8,18 +8,6 @@ export default class Cards extends Component {
         return (
             <>
                 <div className='cards-list'>
-                    <div className='card 1'>
-                        <div className='card_image'>
-                            <img
-                                src='/images/rickandmorty.png'
-                                alt='rickandmorty'
-                            />
-                        </div>
-                        <div className='card_title title-white'>
-                            <p>Oh Jeez!</p>
-                        </div>
-                    </div>
-
                     <div className='card 2'>
                         <div className='card_image'>
                             <img src='/images/broadway.jpg' alt='broadway' />
@@ -66,20 +54,29 @@ export default class Cards extends Component {
                     </div>
                     <div className='card 7'>
                         <div className='card_image'>
-                            <img src='/images/soon.jpg' alt='movies' />
+                            <img src='/images/soon.jpg' alt='soon' />
                         </div>
                         <div className='card_title title-white'>
-                            {/* <p>Coming Soon</p> */}
+                           
                         </div>
                     </div>
-                    <div className='card 8'>
+                    <div className='card 7'>
                         <div className='card_image'>
-                            <img src='/images/soon2.jpg' alt='movies' />
+                            <img src='/images/soon.jpg' alt='soon' />
                         </div>
                         <div className='card_title title-white'>
-                            {/* <p>Coming Soon</p> */}
+                           
                         </div>
                     </div>
+                    <div className='card 7'>
+                        <div className='card_image'>
+                            <img src='/images/soon.jpg' alt='soon' />
+                        </div>
+                        <div className='card_title title-white'>
+                           
+                        </div>
+                    </div>
+                    
                 </div>
             </>
         );
