@@ -88,7 +88,7 @@ export default class Home extends Component {
                         </h2>
                         <br />
                         <p style={{ fontSize: '20px' }}>
-                            Something witty and shit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem atque et optio nemo aliquid fugit illum laudantium molestias voluptatem voluptate.
+                            Something witty and shit. Here is a whole bunch of words to take up space since I don't like using lorem ipsum.
                         </p>
                     </div>
                 </div>

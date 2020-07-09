@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const InputGroup = ({ name, value, placeholder, type, onChange, iconName, error }) => {
- 
+    
     return (
         <div className='textbox'>
             <i className={iconName}></i>

@@ -48,7 +48,9 @@ export class Restaurant extends Component {
                         {console.log(item.apiID);
                         }
                         return (
+
                             <div className='activity-card' key={apiID}>
+
                                 <img
                                     className='restaurant-image'
                                     src={thumb}

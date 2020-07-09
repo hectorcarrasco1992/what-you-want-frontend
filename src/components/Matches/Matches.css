@@ -1,8 +1,8 @@
 #left {
     position: absolute;
     top: 200px;
-    left: 20px;
-    width: 200px;
+    left: -20px;
+    width: 250px;
     height: 400px;
     overflow: hidden;
     background-size: cover;
@@ -16,7 +16,7 @@
     position: absolute;
     top: 0px;
     box-sizing: border-box;
-    width: 200px;
+    width: 250px;
     height: 400px;
     transition: all 0.5s ease-in-out;
     padding: 20px;
@@ -32,7 +32,7 @@
 }
 
 #left img {
-    width: 200px;
+    width: 250px;
     height: 400px;
     object-fit: cover;
     transition: all 1s ease-in-out;
@@ -40,14 +40,12 @@
 
 #left:hover img {
     transition: all 0.5s ease-in-out;
-    transform: rotate(10deg) scale(10.1);
-    -webkit-filter: blur(3px) grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: blur(10px) grayscale(100%);
+    transform: scale(2);
+    filter: blur(50px) grayscale(100%);
 }
 
 .miniposts {
     font-family: sans-serif;
-    /* margin: auto; */
     text-align: center;
     letter-spacing: 1px;
     font-size: 14px;

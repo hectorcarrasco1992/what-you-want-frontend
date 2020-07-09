@@ -5,6 +5,10 @@ import ButtonGroup from '../shared/ButtonGroup'
 import './Matches.css';
 
 export default class Matches extends Component {
+    state = {
+        canSubmit: false
+    }
+
     render() {
         return (
             <>
@@ -12,22 +16,22 @@ export default class Matches extends Component {
                     <img src='/images/mcadams.jpg' alt='profPic' />
                     <div className='lefthover'>
                         <div className='miniposts'>
-                            <p>Name: Rachel McAdams</p>
+                            <p>Name: {this.props.name}</p>
                         </div>
                         <div className='miniposts'>
-                            <p>City: New York</p>
+                            <p>City: {this.props.city}</p>
                         </div>
                         <div className='miniposts'>
-                            <p>State: NY</p>
+                            <p>State: {this.props.state}</p>
                         </div>
                         <div className='miniposts'>
-                            <p>Zip Code: 10036</p>
+                            <p>Zip Code: {this.props.zipCode}</p>
                         </div>
                         
                         <ButtonGroup
                             buttonStyle='btn'
                             title='Check matches'
-                            // disabled={canSubmit}
+                            disabled={this.state.canSubmit}
                         />
                     </div>
                 </div>
