@@ -161,7 +161,7 @@ export class Friends extends Component {
         }
         return (
             <>
-                <div className='search-container'>
+                <div className='search-container' style={{paddingTop: '200px'}}>
                     <form className='friends-box' onSubmit={this.onSubmit}>
                         <h1>Find Friends</h1>
                         <InputGroup
@@ -181,19 +181,6 @@ export class Friends extends Component {
                             title='Search'
                             disabled={canSubmit}
                         />
-                        {/* {inputArray.map((element) => {
-                                                            const {
-                                                                formSetting: {
-                                                                    name,
-                                                                    placeholder,
-                                                                    value,
-                                                                    error,
-                                                                    iconName,
-                                                                },
-                                                            } = element;
-                            
-                            
-                        })} */}
                     </form>
                 </div>
 
