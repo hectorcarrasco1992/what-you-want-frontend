@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ButtonGroup from '../shared/ButtonGroup'
-import { activitiesAPI,likeActivity } from '../redux/actions/activityAction';
+import { activitiesAPI,likeActivity,dislikeActivity } from '../redux/actions/activityAction';
 
 import './Restaurant.css';
 
@@ -17,20 +17,45 @@ export class Restaurant extends Component {
             this.props.authUser.user !== null
         ) {
             await this.props.activitiesAPI(this.props.authUser.user)
-            console.log(this.props.authUser.user);
+            //console.log(this.props.authUser.user);
             ;
         }
     }
 
-    handleLike=async (id)=>{
+    handleLike=async (id,name)=>{
         try {
-            console.log(id);
-            
             //console.log(id);
-            let success = await likeActivity(id)
-            console.log(success);
+            let activityAPIID = this.props.activities.activities[0].apiID;
+            //console.log("id:",activityAPIID);
             
-            return success
+            let user = this.props.authUser.user
+            console.log(id);
+            console.log(name);
+            
+            await likeActivity(user,activityAPIID)
+            
+            
+            
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
+    handleDislike=async (id,name)=>{
+        try {
+            //console.log(id);
+            let activityAPIID = this.props.activities.activities[0].apiID;
+            //console.log("id:",activityAPIID);
+            
+            let user = this.props.authUser.user
+            console.log(id);
+            console.log(name);
+            
+            await dislikeActivity(user,activityAPIID)
+            
+            
+            
             
         } catch (error) {
             console.log(error);
@@ -45,8 +70,7 @@ export class Restaurant extends Component {
                     {this.props.activities.activities.map((item) => {
                         const {canSubmit}= this.state
                         const { name, cost, cuisines, thumb, location,apiID } = item;
-                        {console.log(item.apiID);
-                        }
+                        
                         return (
 
                             <div className='activity-card' key={apiID}>
@@ -67,12 +91,13 @@ export class Restaurant extends Component {
                                     title='Dislike'
                                     id='dislike'
                                     disabled={canSubmit}
+                                    onClick={()=>this.handleDislike(this.props.authUser.user,apiID)}
                                 />
                                 <ButtonGroup
                                     buttonStyle='btn'
                                     title='Like'
                                     disabled={canSubmit}
-                                    onClick={()=>this.handleLike(apiID)}
+                                    onClick={()=>this.handleLike(this.props.authUser.user,apiID)}
                                 />
 
                             </div>
@@ -89,4 +114,4 @@ const mapStateToProps = (state) => ({
     authUser: state.authUser,
 });
 
-export default connect(mapStateToProps, { activitiesAPI,likeActivity })(Restaurant);
+export default connect(mapStateToProps, { activitiesAPI,likeActivity,dislikeActivity })(Restaurant);
