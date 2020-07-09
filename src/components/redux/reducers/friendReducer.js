@@ -1,16 +1,18 @@
 import { FIND_FRIEND } from '../constants/friendConstant';
 
 const initialState = {
-    friends: {}
+    friends: {},
+    user:{}
 };
 
 export default function (state = initialState, action) {
     switch (action.type) {
         case FIND_FRIEND:
-            console.log(action.payload)
+            console.log("__________",action.payload)
             return {
                 ...state,
-                friends: action.payload
+                friends: action.payload.foundFriend,
+                user:action.payload.user
             };
 
 
