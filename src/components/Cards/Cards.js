@@ -7,7 +7,7 @@ export default class Cards extends Component {
     render() {
         return (
             <>
-                <div className='cards-list'>
+                <div className='cards-list' style={{marginTop: '40px'}}>
                     <div className='card 2'>
                         <div className='card_image'>
                             <img src='/images/broadway.jpg' alt='broadway' />
