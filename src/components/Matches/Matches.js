@@ -13,7 +13,7 @@ export default class Matches extends Component {
         return (
             <>
                 <div id='left' style={{marginTop: '250px', marginLeft: '44%'}}>
-                    <img src='/images/mcadams.jpg' alt='profPic' />
+                    {/* <img src='/images/mcadams.jpg' alt='profPic' /> */}
                     <div className='lefthover'>
                         <div className='miniposts'>
                             <p>Name: {this.props.name}</p>
