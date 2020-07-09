@@ -24,33 +24,54 @@ export class Restaurant extends Component {
         }
     }
 
-    handleLike = async (id, name) => {
+
+    handleLike=async (name,id)=>{
+
+
         try {
             //console.log(id);
-            let activityAPIID = this.props.activities.activities[0].apiID;
+            //let activityAPIID = this.props.activities.activities[0].apiID;
             //console.log("id:",activityAPIID);
 
             let user = this.props.authUser.user;
             console.log(id);
             console.log(name);
 
-            await likeActivity(user, activityAPIID);
+            
+            await this.props.likeActivity(user,id)
+            
+            
+            
+            
+
+
+
         } catch (error) {
             console.log(error);
         }
+
+    }
+    handleDislike=async (name,id)=>{
+
     };
     
-    handleDislike = async (id, name) => {
+
         try {
             //console.log(id);
-            let activityAPIID = this.props.activities.activities[0].apiID;
+            //let activityAPIID = this.props.activities.activities[0].apiID;
             //console.log("id:",activityAPIID);
 
             let user = this.props.authUser.user;
             console.log(id);
             console.log(name);
 
-            await dislikeActivity(user, activityAPIID);
+            
+            await this.props.dislikeActivity(user,id)
+            
+            
+            
+            
+
         } catch (error) {
             console.log(error);
         }

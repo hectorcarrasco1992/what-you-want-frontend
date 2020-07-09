@@ -34,13 +34,14 @@ export const activitiesAPI = (user) => async (dispatch) => {
 export const likeActivity = (name,id)=>async(dispatch)=>{
     try {
         console.log("$$$$$$",id)
-        let success = await Axios.post("/api/activity/like-activity",name,id)
+        let user = {username:name.username}
+        let success = await Axios.post("/api/activity/like-activity",{user,id})
         console.log("####",success.data);
-        console.log(dispatch);
+        console.log("yerrrr");
         
         
         dispatch({
-            type:DISLIKE,
+            type:LIKE,
             payload:success.data
         })
 
@@ -54,13 +55,14 @@ export const likeActivity = (name,id)=>async(dispatch)=>{
 export const dislikeActivity =(name,id) => async (dispatch)=>{
     try {
         console.log("$$$$$$",id)
-        let success = await Axios.post("/api/activity/dislike-activity",name,id)
+        let user = {username:name.username}
+        let success = await Axios.post("/api/activity/dislike-activity",{user,id})
         console.log("####",success.data);
         console.log(dispatch);
         
         
         dispatch({
-            type:LIKE,
+            type:DISLIKE,
             payload:success.data
         })
 

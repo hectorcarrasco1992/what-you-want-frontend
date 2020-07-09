@@ -12,14 +12,17 @@ export default function (state = activityState, action) {
             return {
                 ...state,
                 activities: action.payload
-            };
+            }
         
             case LIKE:
-                console.log(state);
+                console.log("hello there");
+                console.log(action.payload);
                 
-                let newActivities = activityState.activities.filter((item)=>{
-                    return item !== action.payload
+                let newActivities = state.activities.filter((item)=>{
+                    return item.apiID !== action.payload.apiID
                 })
+                console.log(newActivities);
+                
                 return{
                     ...state,
                     activities:newActivities
@@ -27,8 +30,8 @@ export default function (state = activityState, action) {
             case DISLIKE:
                 console.log(state);
                 
-                let myActivities = activityState.activities.filter((item)=>{
-                    return item !== action.payload
+                let myActivities = state.activities.filter((item)=>{
+                    return item.apiID !== action.payload.apiID
                 })
                 return{
                     ...state,
