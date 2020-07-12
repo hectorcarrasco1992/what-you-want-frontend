@@ -38,22 +38,33 @@ export class Restaurant extends Component {
         } catch (error) {
             console.log(error);
         }
+
+
+    }
+   
+
+
     };
     handleDislike = async (name, id) => {
         try {
             //console.log(id);
             //let activityAPIID = this.props.activities.activities[0].apiID;
             //console.log("id:",activityAPIID);
-
+    
             let user = this.props.authUser.user;
             console.log(id);
             console.log(name);
 
+            
             await this.props.dislikeActivity(user, id);
+
         } catch (error) {
             console.log(error);
         }
     };
+    
+    
+
 
     render() {
         return (
