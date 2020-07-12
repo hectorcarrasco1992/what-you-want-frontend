@@ -27,10 +27,10 @@ export default class AuthLinks extends Component {
                                     Find Friends
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink to='/user-profile' id='nav-links'>
+                            <li id ="nav-links">
+                                
                                     {this.props.username}
-                                </NavLink>
+                                
                             </li>
 
                             <li>
