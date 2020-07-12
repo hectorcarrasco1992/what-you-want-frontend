@@ -24,10 +24,7 @@ export class Restaurant extends Component {
         }
     }
 
-
-    handleLike=async (name,id)=>{
-
-
+    handleLike = async (name, id) => {
         try {
             //console.log(id);
             //let activityAPIID = this.props.activities.activities[0].apiID;
@@ -37,25 +34,12 @@ export class Restaurant extends Component {
             console.log(id);
             console.log(name);
 
-            
-            await this.props.likeActivity(user,id)
-            
-            
-            
-            
-
-
-
+            await this.props.likeActivity(user, id);
         } catch (error) {
             console.log(error);
         }
-
-    }
-    handleDislike=async (name,id)=>{
-
     };
-    
-
+    handleDislike = async (name, id) => {
         try {
             //console.log(id);
             //let activityAPIID = this.props.activities.activities[0].apiID;
@@ -65,13 +49,7 @@ export class Restaurant extends Component {
             console.log(id);
             console.log(name);
 
-            
-            await this.props.dislikeActivity(user,id)
-            
-            
-            
-            
-
+            await this.props.dislikeActivity(user, id);
         } catch (error) {
             console.log(error);
         }

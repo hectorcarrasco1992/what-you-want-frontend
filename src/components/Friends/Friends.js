@@ -4,6 +4,7 @@ import validator from 'validator';
 
 import { findFriendAPI } from '../redux/actions/friendAction';
 
+
 import Matches from '../Matches/Matches';
 
 import InputGroup from '../shared/InputGroup';
@@ -143,6 +144,7 @@ export class Friends extends Component {
         try {
             await this.props.findFriendAPI({
                 username: this.state.inputValue,
+                user:this.props.authUser.user
             });
 
             console.log('this.props :>> ', this.props.friends);
@@ -185,11 +187,10 @@ export class Friends extends Component {
                 </div>
 
                 <Matches
-                    name={this.props.friends.friends.name}
-                    city={this.props.friends.friends.city}
-                    state={this.props.friends.friends.state}
-                    zipCode={this.props.friends.friends.zipCode}
-                
+                    // name={this.props.friends.friends.name}
+                    // city={this.props.friends.friends.city}
+                    // state={this.props.friends.friends.state}
+                    // zipCode={this.props.friends.friends.zipCode}
                 />
             </>
         );
