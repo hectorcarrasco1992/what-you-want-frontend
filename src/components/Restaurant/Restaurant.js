@@ -38,13 +38,8 @@ export class Restaurant extends Component {
         } catch (error) {
             console.log(error);
         }
-
-
-    }
+        }
    
-
-
-    };
     handleDislike = async (name, id) => {
         try {
             //console.log(id);
@@ -128,6 +123,7 @@ export class Restaurant extends Component {
         );
     }
 }
+
 
 const mapStateToProps = (state) => ({
     activities: state.activities,
