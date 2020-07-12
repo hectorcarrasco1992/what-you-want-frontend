@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-
+import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 const Navbar = React.lazy(() => import('./components/Navbar/Navbar'));
 const Home = React.lazy(() => import('./components/Home/Home'));
-const About = React.lazy(() => import('./components/About/About'));
+
 const Login = React.lazy(() => import('./components/Login/Login'));
 const Register = React.lazy(() => import('./components/Register/Register'));
 const Friends = React.lazy(() => import('./components/Friends/Friends'));
@@ -21,12 +21,10 @@ export default class MainRouter extends Component {
                     <Route path='/' exact component={Home} />
                     <Route path='/register' exact component={Register} />
                     <Route path='/login' exact component={Login} />
-                    <Route path='/about' exact component={About} />
-                    <Route path='/friends' exact component={Friends} />
                     
-                    <Route path='/activities' exact component={Activities} />
-                    
-                    <Route path='/restaurant' exact component={Restaurant} />
+                    <PrivateRoute exact path='/friends' exact component={Friends} />
+                    <PrivateRoute exact path='/activities' exact component={Activities} />
+                    <PrivateRoute exact path='/restaurant' exact component={Restaurant} />
                    
                 </Switch>
                 

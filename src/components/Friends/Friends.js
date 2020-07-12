@@ -184,6 +184,7 @@ export class Friends extends Component {
                             disabled={canSubmit}
                         />
                     </form>
+                    
                 </div>
 
                 <Matches
@@ -192,6 +193,7 @@ export class Friends extends Component {
                     // state={this.props.friends.friends.state}
                     // zipCode={this.props.friends.friends.zipCode}
                 />
+        
             </>
         );
     }
