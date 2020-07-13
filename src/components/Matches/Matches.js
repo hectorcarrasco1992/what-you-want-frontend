@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import {
-    matchedActivity,
-    activitiesAPI,
-} from '../redux/actions/activityAction';
+import { matchedActivity } from '../redux/actions/activityAction';
 
 import ButtonGroup from '../shared/ButtonGroup';
 
