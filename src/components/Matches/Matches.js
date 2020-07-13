@@ -94,14 +94,6 @@ export class Matches extends Component {
                                     : 'No user found'}
                             </p>
                         </div>
-                        <div className='miniposts'>
-                            <p>
-                                Matches:{' '}
-                                {this.state.matches.length >0
-                                    ? this.state.matches.map((item)=>item)
-                                    : 'No matches'}
-                            </p>
-                        </div>
 
                         <ButtonGroup
                             buttonStyle='btn'
@@ -109,6 +101,16 @@ export class Matches extends Component {
                             disabled={this.state.canSubmit}
                             onClick={() => this.checkMatches()}
                         />
+
+                        <div className='miniposts'>
+                            <p>
+                                Matches:{' '}
+                                {this.state.matches.length >0
+                                    ? this.state.matches.map((item) => <p>{item}</p>)
+                                    : ''}
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </>
