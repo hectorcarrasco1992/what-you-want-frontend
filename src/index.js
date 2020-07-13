@@ -10,4 +10,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-console.log('Shitballs 💀')
+console.log('Shitballs 💀');

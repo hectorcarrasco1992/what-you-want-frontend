@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import {
-    matchedActivity,
-    activitiesAPI,
-} from '../redux/actions/activityAction';
+import { matchedActivity } from '../redux/actions/activityAction';
 
 import ButtonGroup from '../shared/ButtonGroup';
 
@@ -104,13 +101,14 @@ export class Matches extends Component {
 
                         <div className='miniposts'>
                             <p>
-                                Matches:{' '}
-                                {this.state.matches.length >0
-                                    ? this.state.matches.map((item) => <p>{item}</p>)
+                                Matches: <br />
+                                {this.state.matches.length > 0
+                                    ? this.state.matches.map((item) => (
+                                          <p>{item}</p>
+                                      ))
                                     : ''}
                             </p>
                         </div>
-
                     </div>
                 </div>
             </>

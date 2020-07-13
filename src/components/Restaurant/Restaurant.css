@@ -1,13 +1,6 @@
-/* body {
-    font-weight: 300;
-    width: 100%;
-    padding: 15px;
-    background: #eee;
-} */
-
 .activity-container {
     font-weight: 300;
-    /* width: 100%; */
+
     padding: 15px;
     background: #eee;
     display: flex;
@@ -36,8 +29,6 @@ h1 {
     border: 2px solid #ccc;
     transition: all 0.4s ease;
     padding: 10px 20px 25px 20px;
-    /* display: inline-block; */
-
     position: relative;
     margin-right: 7px;
 }
@@ -46,12 +37,10 @@ h1 {
     transform: scale(1.1);
     z-index: 1;
     border: 2px solid crimson;
-    
+
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin-top: 0;
 }
-
-
 
 .btn {
     width: 100%;
@@ -68,20 +57,3 @@ h1 {
     border: 1px solid limegreen;
     cursor: pointer;
 }
-
-/* .btn #dislike:hover {
-    color: red
-} */
-
-/* span:before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-right: solid 7px #4970b5;
-    border-bottom: solid 10px rgba(0, 0, 0, 0);
-    position: absolute;
-    left: 0px;
-    bottom: -10px;
-    z-index: 1;
-} */

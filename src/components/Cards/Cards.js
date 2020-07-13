@@ -7,7 +7,7 @@ export default class Cards extends Component {
     render() {
         return (
             <>
-                <div className='cards-list' style={{marginTop: '40px'}}>
+                <div className='cards-list' style={{ marginTop: '40px' }}>
                     <div className='card 2'>
                         <div className='card_image'>
                             <img src='/images/broadway.jpg' alt='broadway' />
@@ -56,27 +56,20 @@ export default class Cards extends Component {
                         <div className='card_image'>
                             <img src='/images/soon.jpg' alt='soon' />
                         </div>
-                        <div className='card_title title-white'>
-                           
-                        </div>
+                        <div className='card_title title-white'></div>
                     </div>
                     <div className='card 7'>
                         <div className='card_image'>
                             <img src='/images/soon.jpg' alt='soon' />
                         </div>
-                        <div className='card_title title-white'>
-                           
-                        </div>
+                        <div className='card_title title-white'></div>
                     </div>
                     <div className='card 7'>
                         <div className='card_image'>
                             <img src='/images/soon.jpg' alt='soon' />
                         </div>
-                        <div className='card_title title-white'>
-                           
-                        </div>
+                        <div className='card_title title-white'></div>
                     </div>
-                    
                 </div>
             </>
         );

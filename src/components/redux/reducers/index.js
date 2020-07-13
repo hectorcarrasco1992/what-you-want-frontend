@@ -7,5 +7,5 @@ import friendReducer from './friendReducer';
 export default combineReducers({
     authUser: authUserReducer,
     activities: activityReducer,
-    friends: friendReducer
+    friends: friendReducer,
 });

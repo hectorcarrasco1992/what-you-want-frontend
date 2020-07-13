@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './Navbar.css';
-
 export default class AuthLinks extends Component {
     render() {
         return (
@@ -27,11 +26,7 @@ export default class AuthLinks extends Component {
                                     Find Friends
                                 </NavLink>
                             </li>
-                            <li id ="nav-links">
-                                
-                                    {this.props.username}
-                                
-                            </li>
+                            <li id='nav-links'>{this.props.username}</li>
 
                             <li>
                                 <NavLink

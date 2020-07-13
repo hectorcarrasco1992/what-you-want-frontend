@@ -8,7 +8,7 @@ body {
     height: 1000px;
 }
 
-video{ 
+video {
     z-index: 50;
 }
 
@@ -74,14 +74,9 @@ video{
     float: left;
 }
 
-h2 {
-    font-size: 
-}
-
 .box1 {
     width: 80%;
     height: 400px;
-    /* background: red; */
     margin: 20px auto;
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
@@ -102,7 +97,6 @@ h2 {
 .box3 {
     width: 80%;
     height: 400px;
-    /* background: orange; */
     margin: 20px auto;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
@@ -111,7 +105,6 @@ h2 {
 .box4 {
     width: 80%;
     height: 400px;
-    /* background: red; */
     margin: 20px auto;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
