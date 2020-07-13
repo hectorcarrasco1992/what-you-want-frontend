@@ -106,7 +106,7 @@ export class Matches extends Component {
                             <p>
                                 Matches:{' '}
                                 {this.state.matches.length >0
-                                    ? this.state.matches.map((item)=>item)
+                                    ? this.state.matches.map((item) => <p>{item}</p>)
                                     : ''}
                             </p>
                         </div>
