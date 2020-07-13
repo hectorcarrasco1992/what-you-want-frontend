@@ -4,7 +4,6 @@ import validator from 'validator';
 
 import { findFriendAPI } from '../redux/actions/friendAction';
 
-
 import Matches from '../Matches/Matches';
 
 import InputGroup from '../shared/InputGroup';
@@ -98,12 +97,6 @@ export class Friends extends Component {
             inputValue: event.target.value,
         });
 
-        // console.log('event.target', event.target);
-
-        // console.log('$$$$$$', [event.target.name]);
-
-        // console.log('state....', this.state);
-
         let isValidatedCheck = this.checkInputValidation(
             this.state.validate,
             event.target.name,
@@ -144,7 +137,7 @@ export class Friends extends Component {
         try {
             await this.props.findFriendAPI({
                 username: this.state.inputValue,
-                user:this.props.authUser.user
+                user: this.props.authUser.user,
             });
 
             console.log('this.props :>> ', this.props.friends);
@@ -163,7 +156,10 @@ export class Friends extends Component {
         }
         return (
             <>
-                <div className='search-container' style={{paddingTop: '200px'}}>
+                <div
+                    className='search-container'
+                    style={{ paddingTop: '200px' }}
+                >
                     <form className='friends-box' onSubmit={this.onSubmit}>
                         <h1>Find Friends</h1>
                         <InputGroup
@@ -184,16 +180,9 @@ export class Friends extends Component {
                             disabled={canSubmit}
                         />
                     </form>
-                    
                 </div>
 
-                <Matches
-                    // name={this.props.friends.friends.name}
-                    // city={this.props.friends.friends.city}
-                    // state={this.props.friends.friends.state}
-                    // zipCode={this.props.friends.friends.zipCode}
-                />
-        
+                <Matches />
             </>
         );
     }

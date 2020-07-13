@@ -104,13 +104,14 @@ export class Matches extends Component {
 
                         <div className='miniposts'>
                             <p>
-                                Matches:{' '}
-                                {this.state.matches.length >0
-                                    ? this.state.matches.map((item) => <p>{item}</p>)
+                                Matches: <br />
+                                {this.state.matches.length > 0
+                                    ? this.state.matches.map((item) => (
+                                          <p>{item}</p>
+                                      ))
                                     : ''}
                             </p>
                         </div>
-
                     </div>
                 </div>
             </>

@@ -13,7 +13,7 @@
 .lefthover {
     /* opacity: 0; */
     opacity: 1;
-    /* background: linear-gradient(90deg,slateblue 0,darkturquoise 100%);; */
+    
     background: linear-gradient(30deg,rgb(196, 196, 202) 0,rgb(49, 49, 49) 100%);;
     position: absolute;
     top: 0px;

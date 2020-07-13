@@ -3,7 +3,7 @@ import jwt_decode from 'jwt-decode';
 import Axios from '../lib/Axios/Axios';
 
 import { LOGIN, LOGOUT } from '../constants/authUserConstant';
-// import { successToast } from '../../Toastify/Toast';
+
 
 export const signupAPI = (userInfo) => async (dispatch) => {
     try {

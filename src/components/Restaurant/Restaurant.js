@@ -20,16 +20,11 @@ export class Restaurant extends Component {
             this.props.authUser.user !== null
         ) {
             await this.props.activitiesAPI(this.props.authUser.user);
-            //console.log(this.props.authUser.user);
         }
     }
 
     handleLike = async (name, id) => {
         try {
-            //console.log(id);
-            //let activityAPIID = this.props.activities.activities[0].apiID;
-            //console.log("id:",activityAPIID);
-
             let user = this.props.authUser.user;
             console.log(id);
             console.log(name);
@@ -38,28 +33,19 @@ export class Restaurant extends Component {
         } catch (error) {
             console.log(error);
         }
-        }
-   
+    };
+
     handleDislike = async (name, id) => {
         try {
-            //console.log(id);
-            //let activityAPIID = this.props.activities.activities[0].apiID;
-            //console.log("id:",activityAPIID);
-    
             let user = this.props.authUser.user;
             console.log(id);
             console.log(name);
 
-            
             await this.props.dislikeActivity(user, id);
-
         } catch (error) {
             console.log(error);
         }
     };
-    
-    
-
 
     render() {
         return (
@@ -123,7 +109,6 @@ export class Restaurant extends Component {
         );
     }
 }
-
 
 const mapStateToProps = (state) => ({
     activities: state.activities,

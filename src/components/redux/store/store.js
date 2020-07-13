@@ -6,7 +6,6 @@ const middleware = [thunk];
 
 const store = createStore(
     rootReducer,
-    //? This lets the browser know you're trying to use Redux Devtools
     compose(
         applyMiddleware(...middleware),
         window.__REDUX_DEVTOOLS_EXTENSION__

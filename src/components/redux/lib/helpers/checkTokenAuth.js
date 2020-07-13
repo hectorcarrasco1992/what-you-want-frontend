@@ -16,11 +16,9 @@ const checkTokenAuth = (store) => {
         const currentTIme = Date.now() / 1000;
 
         if (decoded.exp < currentTIme) {
-            // if expired we are going to log the user out and redirect user to login
             store.dispatch(logout());
             HistoryAPI('/login');
         } else {
-            // setAuthToken and set the state of the navbar
             setAuthToken(jwtToken);
             store.dispatch(checkReloadIfTokenExistAndNotExpired(decoded));
         }
